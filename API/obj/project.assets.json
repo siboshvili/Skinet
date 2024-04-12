@@ -634,6 +634,30 @@
         "build": {
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
+      },
+      "Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
+        }
+      },
+      "Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Core": "1.0.0",
+          "Microsoft.EntityFrameworkCore.Sqlite": "7.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -1667,12 +1691,22 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
+    },
+    "Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Infrastructure/Infrastructure.csproj",
+      "msbuildProject": "../Infrastructure/Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Infrastructure >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.0",
-      "Microsoft.EntityFrameworkCore.Sqlite >= 7.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -1682,11 +1716,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/andriasiboshvili/Desktop/skinet/API/API.csproj",
+      "projectUniqueName": "/Users/andriasiboshvili/Desktop/Skinet/API/API.csproj",
       "projectName": "API",
-      "projectPath": "/Users/andriasiboshvili/Desktop/skinet/API/API.csproj",
+      "projectPath": "/Users/andriasiboshvili/Desktop/Skinet/API/API.csproj",
       "packagesPath": "/Users/andriasiboshvili/.nuget/packages/",
-      "outputPath": "/Users/andriasiboshvili/Desktop/skinet/API/obj/",
+      "outputPath": "/Users/andriasiboshvili/Desktop/Skinet/API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/andriasiboshvili/.nuget/NuGet/NuGet.Config"
@@ -1701,7 +1735,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/andriasiboshvili/Desktop/Skinet/Infrastructure/Infrastructure.csproj": {
+              "projectPath": "/Users/andriasiboshvili/Desktop/Skinet/Infrastructure/Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -1717,10 +1755,6 @@
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
-            "target": "Package",
-            "version": "[7.0.0, )"
-          },
-          "Microsoft.EntityFrameworkCore.Sqlite": {
             "target": "Package",
             "version": "[7.0.0, )"
           },
