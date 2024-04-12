@@ -30,3 +30,4 @@
 /Users/andriasiboshvili/Desktop/skinet/API/obj/Debug/net8.0/API.pdb
 /Users/andriasiboshvili/Desktop/skinet/API/obj/Debug/net8.0/API.genruntimeconfig.cache
 /Users/andriasiboshvili/Desktop/skinet/API/obj/Debug/net8.0/ref/API.dll
+/Users/andriasiboshvili/Desktop/Skinet/API/obj/Debug/net8.0/API.sourcelink.json
