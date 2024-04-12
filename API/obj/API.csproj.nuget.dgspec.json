@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/andriasiboshvili/Desktop/skinet/API/API.csproj": {}
+    "/Users/andriasiboshvili/Desktop/Skinet/API/API.csproj": {}
   },
   "projects": {
-    "/Users/andriasiboshvili/Desktop/skinet/API/API.csproj": {
+    "/Users/andriasiboshvili/Desktop/Skinet/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/andriasiboshvili/Desktop/skinet/API/API.csproj",
+        "projectUniqueName": "/Users/andriasiboshvili/Desktop/Skinet/API/API.csproj",
         "projectName": "API",
-        "projectPath": "/Users/andriasiboshvili/Desktop/skinet/API/API.csproj",
+        "projectPath": "/Users/andriasiboshvili/Desktop/Skinet/API/API.csproj",
         "packagesPath": "/Users/andriasiboshvili/.nuget/packages/",
-        "outputPath": "/Users/andriasiboshvili/Desktop/skinet/API/obj/",
+        "outputPath": "/Users/andriasiboshvili/Desktop/Skinet/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/andriasiboshvili/.nuget/NuGet/NuGet.Config"
