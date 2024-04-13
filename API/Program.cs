@@ -18,6 +18,7 @@ builder.Services.AddDbContext<StoreContext>(opt =>
 });
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
