@@ -17,6 +17,7 @@ builder.Services.AddDbContext<StoreContext>(opt =>
     opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
 
 var app = builder.Build();
@@ -43,7 +44,7 @@ try
 }
 catch (Exception ex)
 {
-   logger.LogError(ex, "An error occured during migration");
+    logger.LogError(ex, "An error occured during migration");
 }
 
 
