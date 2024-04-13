@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/LarQFeJMMT627UkGhofiXE66QRZ2o3E8WV2nzXHzkgeKa4/l8HtzC0785i2OgU6ROwk3K89ijjMX76Y0vSP2A==",
+  "dgSpecHash": "1qfM9O0m5RdfxM1jsLnQPE8In4Xm8lmWJ199WuJF51obgCkOucPBIUHkHUuG8S+vkvH9j9hKiqkOomErhN8Bzw==",
   "success": true,
-  "projectFilePath": "/Users/andriasiboshvili/Desktop/Skinet/Infrastructure/Infrastructure.csproj",
+  "projectFilePath": "/Users/andriasiboshvili/Desktop/skinet/Infrastructure/Infrastructure.csproj",
   "expectedPackageFiles": [
     "/Users/andriasiboshvili/.nuget/packages/microsoft.data.sqlite.core/7.0.0/microsoft.data.sqlite.core.7.0.0.nupkg.sha512",
     "/Users/andriasiboshvili/.nuget/packages/microsoft.entityframeworkcore/7.0.0/microsoft.entityframeworkcore.7.0.0.nupkg.sha512",

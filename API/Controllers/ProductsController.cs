@@ -1,9 +1,7 @@
 
 using Core.Entities;
 using Core.Interfaces;
-using Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
@@ -15,14 +13,13 @@ namespace API.Controllers
         public ProductsController(IProductRepository repo)
         {
             _repo = repo;
+
         }
 
         [HttpGet]
         public async Task<ActionResult<List<Product>>> GetProducts()
         {
             var products = await _repo.GetProductsAsync();
-
-
 
             return Ok(products);
         }

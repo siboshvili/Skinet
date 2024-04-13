@@ -1699,8 +1699,8 @@
     },
     "Infrastructure/1.0.0": {
       "type": "project",
-      "path": "../Infrastructure/Infrastructure.csproj",
-      "msbuildProject": "../Infrastructure/Infrastructure.csproj"
+      "path": "../../skinet/Infrastructure/Infrastructure.csproj",
+      "msbuildProject": "../../skinet/Infrastructure/Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1736,8 +1736,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/andriasiboshvili/Desktop/Skinet/Infrastructure/Infrastructure.csproj": {
-              "projectPath": "/Users/andriasiboshvili/Desktop/Skinet/Infrastructure/Infrastructure.csproj"
+            "/Users/andriasiboshvili/Desktop/skinet/Infrastructure/Infrastructure.csproj": {
+              "projectPath": "/Users/andriasiboshvili/Desktop/skinet/Infrastructure/Infrastructure.csproj"
             }
           }
         }

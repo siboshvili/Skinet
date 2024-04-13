@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "/Users/andriasiboshvili/Desktop/Skinet/Infrastructure/Infrastructure.csproj": {}
+    "/Users/andriasiboshvili/Desktop/skinet/Infrastructure/Infrastructure.csproj": {}
   },
   "projects": {
     "/Users/andriasiboshvili/Desktop/Skinet/Core/Core.csproj": {
@@ -58,14 +58,14 @@
         }
       }
     },
-    "/Users/andriasiboshvili/Desktop/Skinet/Infrastructure/Infrastructure.csproj": {
+    "/Users/andriasiboshvili/Desktop/skinet/Infrastructure/Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/andriasiboshvili/Desktop/Skinet/Infrastructure/Infrastructure.csproj",
+        "projectUniqueName": "/Users/andriasiboshvili/Desktop/skinet/Infrastructure/Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "/Users/andriasiboshvili/Desktop/Skinet/Infrastructure/Infrastructure.csproj",
+        "projectPath": "/Users/andriasiboshvili/Desktop/skinet/Infrastructure/Infrastructure.csproj",
         "packagesPath": "/Users/andriasiboshvili/.nuget/packages/",
-        "outputPath": "/Users/andriasiboshvili/Desktop/Skinet/Infrastructure/obj/",
+        "outputPath": "/Users/andriasiboshvili/Desktop/skinet/Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/andriasiboshvili/.nuget/NuGet/NuGet.Config"
