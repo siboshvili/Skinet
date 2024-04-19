@@ -13,6 +13,7 @@ export class TestErrorComponent {
   constructor(private http: HttpClient) {}
 
   get404Error() {
+    console.log(environment);
     this.http.get(this.baseUrl + 'products/42').subscribe({
       next: (response) => console.log(response),
       error: (error) => console.log(error),
@@ -20,7 +21,7 @@ export class TestErrorComponent {
   }
 
   get500Error() {
-    this.http.get(this.baseUrl + 'buggy/server-error').subscribe({
+    this.http.get(this.baseUrl + 'buggy/servererror').subscribe({
       next: (response) => console.log(response),
       error: (error) => console.log(error),
     });
