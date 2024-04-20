@@ -1,5 +1,4 @@
 using System.Text.Json;
-using System.Text.Json.Nodes;
 using Core.Entities;
 using Core.Interfaces;
 using StackExchange.Redis;
