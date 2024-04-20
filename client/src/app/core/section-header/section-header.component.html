@@ -6,10 +6,11 @@
       </div>
       <div class="col-3">
         <nav>
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item">Home</li>
-            <li class="breadcrumb-item active" aria-current="page">Library</li>
-          </ol>
+          <xng-breadcrumb>
+            <ng-container *ngBreadcrumbItem="let breadcrumb">
+              {{ breadcrumb | titlecase }}</ng-container
+            >
+          </xng-breadcrumb>
         </nav>
       </div>
     </div>
