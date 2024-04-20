@@ -6,6 +6,6 @@ namespace Core.Interfaces
     {
         Task<CustomerBasket> GetBasketAsync(string basketId);
         Task<CustomerBasket> UpdateBasketAsync(CustomerBasket basketId);
-        Task<bool> DeleteBasketAsync();
+        Task<bool> DeleteBasketAsync(string basketId);
     }
 }
