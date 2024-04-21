@@ -1,6 +1,6 @@
 import * as cuid from 'cuid';
 
-interface BasketItem {
+export interface BasketItem {
   id: number;
   productName: string;
   price: number;
