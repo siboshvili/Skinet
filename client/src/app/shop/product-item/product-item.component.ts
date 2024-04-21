@@ -13,6 +13,6 @@ export class ProductItemComponent {
   constructor(private basketService: BasketService) {}
 
   addItemToBasket() {
-    this.product && this.basketService.addItemBasket(this.product);
+    this.product && this.basketService.addItemToBasket(this.product);
   }
 }
