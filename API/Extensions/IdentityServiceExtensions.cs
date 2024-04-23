@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Infrastructure.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Extensions
@@ -7,10 +7,11 @@ namespace API.Extensions
     {
         public static IServiceCollection AddIdentityServices(this IServiceCollection services, IConfiguration config)
         {
-            services.AddDbContext<IdentityDbContext>(opt =>
+            services.AddDbContext<AppIdentityDbContext>(opt =>
             {
                 opt.UseSqlite(config.GetConnectionString("IdentityConnection"));
             });
+
 
             return services;
         }
