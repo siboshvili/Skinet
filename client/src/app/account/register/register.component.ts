@@ -1,7 +1,13 @@
 import { Component } from '@angular/core';
 import { AccountService } from '../account.service';
 import { Router } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {
+  AbstractControl,
+  AsyncValidatorFn,
+  FormBuilder,
+  Validators,
+} from '@angular/forms';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-register',
@@ -21,7 +27,7 @@ export class RegisterComponent {
     "(?=^.{8,20}$)(?=.*d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&amp;*()_+}{&quot;:;'?/&gt;.&lt;,])(?!.*s).*$";
 
   registerForm = this.fb.group({
-    displayName: ['', Validators.required],
+    displayName: ['', Validators.required, [this.validateEmailNotTaken]],
     email: ['', [Validators.required, Validators.email]],
     password: [
       '',
@@ -34,5 +40,13 @@ export class RegisterComponent {
       next: () => this.router.navigateByUrl('/shop'),
       error: (error) => (this.errors = error.errors),
     });
+  }
+
+  validateEmailNotTaken(): AsyncValidatorFn {
+    return (control: AbstractControl) => {
+      return this.accountService
+        .checkEmailExists(control.value)
+        .pipe(map((result) => (result ? { emailExists: true } : null)));
+    };
   }
 }
