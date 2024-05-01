@@ -10,9 +10,9 @@ export class CheckoutComponent {
   constructor(private fb: FormBuilder) {}
 
   checkoutForm = this.fb.group({
-    addressFrom: this.fb.group({
+    addressForm: this.fb.group({
       firstName: ['', Validators.required],
-      lasName: ['', Validators.required],
+      lastName: ['', Validators.required],
       street: ['', Validators.required],
       city: ['', Validators.required],
       state: ['', Validators.required],
@@ -21,7 +21,7 @@ export class CheckoutComponent {
     deliveryForm: this.fb.group({
       deliveryMethod: ['', Validators.required],
     }),
-    paymanetForm: this.fb.group({
+    paymentForm: this.fb.group({
       nameOnCard: ['', Validators.required],
     }),
   });
