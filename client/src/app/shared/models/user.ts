@@ -5,7 +5,7 @@ export interface User {
 }
 
 export interface Address {
-  firstName: string;
+  fistName: string;
   lastName: string;
   street: string;
   city: string;

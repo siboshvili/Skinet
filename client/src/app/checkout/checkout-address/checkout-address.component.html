@@ -3,6 +3,11 @@
     <h4>Shipping address</h4>
     <button
       class="btn btn-outline-success mb-3"
+      (click)="saveUserAddress()"
+      [disabled]="
+        !checkoutForm.get('addressForm')?.valid ||
+        !checkoutForm.get('addressForm')?.dirty
+      "
       [disabled]="
         !checkoutForm.get('addressForm')?.valid ||
         !checkoutForm.get('addressForm')?.dirty
@@ -14,8 +19,8 @@
   <div class="row" formGroupName="addressForm">
     <div class="form-group col-6">
       <app-text-input
-        [label]="'First name'"
-        formControlName="firstName"
+        [label]="'Fist name'"
+        formControlName="fistName"
       ></app-text-input>
     </div>
     <div class="form-group col-6">
