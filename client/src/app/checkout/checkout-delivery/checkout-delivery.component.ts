@@ -10,12 +10,12 @@ import { CheckoutService } from '../checkout.service';
 })
 export class CheckoutDeliveryComponent implements OnInit {
   @Input() checkoutForm?: FormGroup;
-  delivaryMethods: DeliveryMethod[] = [];
+  deliveryMethods: DeliveryMethod[] = [];
 
   constructor(private checkoutService: CheckoutService) {}
   ngOnInit(): void {
     this.checkoutService.getDeliveryMethods().subscribe({
-      next: (dm) => (this.delivaryMethods = dm),
+      next: (dm) => (this.deliveryMethods = dm),
     });
   }
 }
