@@ -17,11 +17,12 @@ export interface OrderItem {
 export interface Order {
   id: number;
   buyerEmail: string;
-  orderDate: Date;
+  orderDate: string;
   shipToAddress: Address;
   deliveryMethod: string;
+  shippingPrice: number;
   orderItems: OrderItem[];
   subtotal: number;
-  total: string;
+  total: number;
   status: string;
 }
