@@ -37,15 +37,15 @@ export class CheckoutPaymentComponent {
       },
     });
   }
+
   private getOrderToCreate(basket: Basket) {
     const deliveryMethodId = this.checkoutForm
       ?.get('deliveryForm')
       ?.get('deliveryMethod')?.value;
     const shipToAddress = this.checkoutForm?.get('addressForm')
       ?.value as Address;
-    console.log(deliveryMethodId);
-    if (!deliveryMethodId || !shipToAddress) return;
-
+    if (!deliveryMethodId || !shipToAddress)
+      throw new Error('Problem with basket');
     return {
       basketId: basket.id,
       deliveryMethodId: deliveryMethodId,
