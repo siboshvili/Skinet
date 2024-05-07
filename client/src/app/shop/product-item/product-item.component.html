@@ -9,7 +9,10 @@
       <button (click)="addItemToBasket()" class="btn btn-primary me-2">
         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
       </button>
-      <button routerLink="/shop/{{ product.id }}" class="btn btn-primary">
+      <button
+        routerLink="/shop/{{ product.id }}"
+        class="btn btn-primary text-decoration-none"
+      >
         View
       </button>
     </div>

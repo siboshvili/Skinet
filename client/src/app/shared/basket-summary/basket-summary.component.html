@@ -1,9 +1,9 @@
 <div
-  class="table-response"
+  class="table-responsive"
   *ngIf="basketService.basketSource$ | async as basket"
 >
-  <table class="table">
-    <thead class="bg-light text-uppercase">
+  <table class="table table-borderless">
+    <thead [class.bg-light]="isBasket" class="border-0 py-2">
       <tr>
         <th><div class="py-2">Product</div></th>
         <th><div class="py-2">Price</div></th>
@@ -15,7 +15,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of basket.items" [class.bg-light]="isBasket">
+      <tr *ngFor="let item of basket.items">
         <th>
           <div class="p-2 d-inline-block">
             <img
@@ -24,27 +24,29 @@
               class="img-fluid"
               style="max-height: 50px"
             />
-          </div>
-          <div class="ms-3 d-inline-block align-middle">
-            <h5 class="mb-0">
-              <a
-                routerLink="/shop/{{ item.id }}"
-                class="text-dark text-decoration-none"
-              >
-                {{ item.productName }}
-              </a>
-            </h5>
-            <span class="text-muted fst-italic"> Type: {{ item.type }} </span>
+            <div class="ms-3 d-inline-block align-middle">
+              <h5 class="mb-0">
+                <a
+                  routerLink="/shop/{{ item.id }}"
+                  class="text-dark text-decoration-none"
+                >
+                  {{ item.productName }}
+                </a>
+              </h5>
+              <span class="text-muted fst-italic"> Type: {{ item.type }} </span>
+            </div>
           </div>
         </th>
         <td class="align-middle">
           <strong>{{ item.price | currency }}</strong>
         </td>
         <td class="align-middle">
-          <div class="d-flex align-item-center">
+          <div
+            class="d-flex align-items-center"
+            [class.justify-content-center]="!isBasket"
+          >
             <i
               *ngIf="isBasket"
-              [class.justify-content-center]="!isBasket"
               class="fa fa-minus-circle text-warning me-2"
               style="cursor: pointer; font-size: 2em"
               (click)="removeBasketItem(item.id, 1)"

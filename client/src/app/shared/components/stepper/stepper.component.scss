@@ -3,18 +3,6 @@ button.nav-link {
   border-radius: 0;
   border: none;
 
-  &:focus {
-      outline: none;
-  }
-  &.active:hover {
-      color: white;
-  }
-  & :active {
-      outline: none;
-  }
-  &.active:focus {
-      outline: none;
-  }
   &:disabled:not(.active) {
       color: #333;
       background: #e9ecef;

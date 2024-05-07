@@ -15,10 +15,10 @@
       <ul class="list-group my-3">
         <li
           class="list-group-item"
+          *ngFor="let brand of brands"
           [class.active]="brand.id === shopParams.brandId"
           [value]="brand.id"
           (click)="onBrandSelected(brand.id)"
-          *ngFor="let brand of brands"
         >
           {{ brand.name }}
         </li>
@@ -54,7 +54,7 @@
           <button (click)="onSearch()" class="btn btn-outline-primary mx-2">
             Search
           </button>
-          <button (click)="onReset()" class="btn btn-outline-success">
+          <button (click)="onReset()" class="btn btn-outline-success mx-2">
             Reset
           </button>
         </div>
